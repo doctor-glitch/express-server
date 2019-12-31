@@ -17,4 +17,9 @@ app.get("/json", (req, res) => {
   res.json(todos);
 });
 
+app.get("/add", (req, res) => {
+  const todos = say.addTodo();
+  res.json(todos);
+});
+
 app.listen(port, () => console.log(`App listening on port ${port}!`));
