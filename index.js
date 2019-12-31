@@ -22,4 +22,9 @@ app.get("/add", (req, res) => {
   res.json(todos);
 });
 
+app.get("/delete", (req, res) => {
+  const todos = say.deleteTodo(req.query.id);
+  res.json(todos);
+});
+
 app.listen(port, () => console.log(`App listening on port ${port}!`));
