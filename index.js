@@ -12,4 +12,9 @@ app.get("/", (req, res) => {
   }
 });
 
+app.get("/json", (req, res) => {
+  const todos = say.getTodo();
+  res.json(todos);
+});
+
 app.listen(port, () => console.log(`App listening on port ${port}!`));
